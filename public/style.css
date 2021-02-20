@@ -1,0 +1,13 @@
+.list-group-item-action {
+  cursor: pointer;
+}
+
+.list-group {
+  margin-bottom: 10px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+
