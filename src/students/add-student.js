@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import env from './env';
+import env from '../env';
 import { useAlert } from 'react-alert';
-import LoadingButton from './loading-button';
+import LoadingButton from '../loading-button';
 
 const AddStudent = () => {
   const alert = useAlert();
@@ -37,10 +37,10 @@ const AddStudent = () => {
   return (
     <>
       <div className="card">
-        <div className="card-header">Add New Student</div>
+        <div className="card-header student-card text-light">Add New Student</div>
         <div className="card-body">
           <div className="row">
-            <div className="col-6">
+            <div className="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div className="form-group">
                 <label htmlFor="studentEmail">Student Email ID</label>
                 <input type="email" className="form-control" id="studentEmail" value={email} onChange={(e) => setEmail(e.target.value)} aria-describedby="email" />
@@ -49,7 +49,7 @@ const AddStudent = () => {
                 </small>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-xs-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div className="form-group">
                 <label htmlFor="studentName">Student Name</label>
                 <input type="text" className="form-control" id="studentName" value={name} onChange={(e) => setName(e.target.value)} aria-describedby="name" />

@@ -1,3 +1,3 @@
-const baseUrl = 'http://localhost:3000/';
+const baseUrl = 'https://student-mentor-backend.herokuapp.com/';
 
 export default baseUrl;

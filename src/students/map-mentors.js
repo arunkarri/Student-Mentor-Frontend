@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import env from './env';
-import ProgressLoader from './progress-loader';
-import LoadingButton from './loading-button';
+import env from '../env';
+import ProgressLoader from '../progress-loader';
+import LoadingButton from '../loading-button';
 import { useAlert } from 'react-alert';
 
 const MapMentors = () => {
@@ -58,13 +58,13 @@ const MapMentors = () => {
   return (
     <>
       <div className="card">
-        <div className="card-header">Assign Mentor</div>
+        <div className="card-header student-card text-light">Assign Mentor</div>
         <div className="card-body">
           {loading == true ? (
             <ProgressLoader />
           ) : (
             <>
-              <div>
+              <div className="col-xs-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div className="d-flex justify-content-end mb-1">
                   <button type="button" className="btn btn-dark btn-xs" onClick={loadData}>
                     <i className="fas fa-sync"></i> &nbsp;Reload Data
@@ -72,7 +72,7 @@ const MapMentors = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-6">
+                <div className="col-xs-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <b>Select Student</b>
                   <ul className="list-group">
                     {studentList.map((ele, index) => {
@@ -84,7 +84,7 @@ const MapMentors = () => {
                     })}
                   </ul>
                 </div>
-                <div className="col-6">
+                <div className="col-xs-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <b>Select Mentor</b>
                   <ul className="list-group">
                     {mentorList.map((ele, index) => {
@@ -97,7 +97,7 @@ const MapMentors = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-6 mt-2">
+              <div className="col-xs-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-2">
                 {submitLoad === true ? (
                   <LoadingButton />
                 ) : (

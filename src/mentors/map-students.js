@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import env from './env';
-import ProgressLoader from './progress-loader';
-import LoadingButton from './loading-button';
+import env from '../env';
+import ProgressLoader from '../progress-loader';
+import LoadingButton from '../loading-button';
 import { useAlert } from 'react-alert';
 
 const MapStudents = () => {
@@ -100,22 +100,21 @@ const MapStudents = () => {
   return (
     <>
       <div className="card">
-        <div className="card-header">Map Students to Mentor</div>
+        <div className="card-header mentor-card text-light">Map Students to Mentor</div>
         <div className="card-body">
           {loading == true ? (
             <ProgressLoader />
           ) : (
             <>
               <div className="row">
-                <div className="col-6 mb-2"></div>
-                <div className="col-6 d-flex justify-content-end mb-1">
+                <div className="col-xs-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-end mb-1">
                   <button type="button" className="btn btn-dark btn-xs" onClick={loadData}>
                     <i className="fas fa-sync"></i> &nbsp;Reload Data
                   </button>
                 </div>
               </div>
               <div className="row">
-                <div className="col-6">
+                <div className="col-xs-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div className="dropdown mt-3 mb-5">
                     <button className="btn btn-secondary btn-xs dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Select a Mentor
@@ -145,7 +144,7 @@ const MapStudents = () => {
                     ''
                   )}
                 </div>
-                <div className="col-6">
+                <div className="col-xs-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <b>Select Students</b>
                   <ul className="list-group">
                     {studentList.map((ele, index) => {
@@ -159,7 +158,7 @@ const MapStudents = () => {
                 </div>
               </div>
 
-              <div className="col-6 mt-2">
+              <div className="col-xs-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-2">
                 {submitLoad === true ? (
                   <LoadingButton />
                 ) : (
